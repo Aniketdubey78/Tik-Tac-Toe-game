@@ -1,0 +1,132 @@
+:root {
+            --primary: #4f46e5;
+            --secondary: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        body {
+            background-image: url('https://images.unsplash.com/photo-1517841905240-472988babdf9');
+            background-size: cover;
+            background-position: center;
+            color: var(--dark);
+            background-color: rgba(30, 41, 59, 0.7);
+        }
+        .dark-mode {
+            --primary: #818cf8;
+            --secondary: #fbbf24;
+            --dark: #f8fafc;
+            --light: #1e293b;
+            background-color: rgba(0, 0, 0, 0.85) !important;
+        
+         font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            transition: all 0.3s ease;
+        }
+        .game-cell {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: 2px solid var(--dark);
+            transition: background-color 0.2s ease;
+        }
+         .game-cell:hover {
+            background-color: rgba(79, 70, 229, 0.1);
+        }
+        
+        .computer-thinking {
+            background-color: rgba(245, 158, 11, 0.2);
+        }
+        .x-symbol {
+            color: var(--primary);
+        }
+        .o-symbol {
+            color: var(--secondary);
+        }
+        .winning-cell {
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+          .theme-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 100;
+            background-color: var(--light);
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .logo-container {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .hidden {
+            display: none;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        .dark-mode .container {
+            background-color: rgba(30, 41, 59, 0.9);
+        }
+        .score-board {
+            margin-top: 20px;
+        }
+        .score-board div {
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        .start-button {
+            background-color: var(--primary);
+            color: white;
+        }
+        .play-again-button {
+            background-color: var(--secondary);
+            color: white;
+        }
+        .dark-mode-button {
+            background-color: var(--dark);
+            color: white;
+        }
+         .return-button {
+            background-color: var(--primary);
+            color: white;
+        }
+        @media (max-width: 600px) {
+            .game-cell {
+                width: 80px;
+                height: 80px;
+                font-size: 2.5rem;
+            }
+        }
